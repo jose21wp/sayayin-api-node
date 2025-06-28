@@ -1,0 +1,47 @@
+components:
+  schemas:
+    Sayayin:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        ki:
+          type: string
+        maxKi:
+          type: string
+        race:
+          type: string
+        gender:
+          type: string
+        description:
+          type: string
+        image:
+          type: string
+        affiliation:
+          type: string
+        deletedAt:
+          type: string
+          format: date-time
+          nullable: true
+        originPlanet:
+          $ref: '#/components/schemas/Planet'
+        transformations:
+          type: array
+          items:
+            $ref: '#/components/schemas/Transformation'
+      example:
+        id: 2
+        name: "Vegeta2"
+        ki: "7800"
+        maxKi: "9000"
+        race: "Saiyajin"
+        gender: "Masculino"
+        description: "El príncipe orgulloso de los Saiyajin, siempre buscando superar su límite."
+        image: "https://dragonball.com/vegeta.png"
+        affiliation: "Guerreros Z"
+        deletedAt: null
+        originPlanet:
+          id: 3
+          name: "P
